@@ -1,7 +1,54 @@
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.layout.GridPane?>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<GridPane fx:controller="ba.unsa.etf.rpr.tutorijal05.Controller"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<?import javafx.geometry.Insets?>
+<GridPane alignment="center" hgap="5.0" vgap="5.0" xmlns="http://javafx.com/javafx/8.0.191" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rpr.tutorijal05.Controller">
+   <columnConstraints>
+      <ColumnConstraints hgrow="ALWAYS" halignment="CENTER"/>
+      <ColumnConstraints hgrow="ALWAYS" halignment="CENTER"/>
+      <ColumnConstraints hgrow="ALWAYS" halignment="CENTER"/>
+      <ColumnConstraints hgrow="ALWAYS" halignment="CENTER"/>
+      <ColumnConstraints hgrow="ALWAYS" halignment="CENTER"/>
+      <ColumnConstraints hgrow="ALWAYS" halignment="CENTER"/>
+      <ColumnConstraints hgrow="ALWAYS" halignment="CENTER"/>
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints vgrow="ALWAYS" valignment="CENTER"/>
+      <RowConstraints vgrow="ALWAYS" valignment="CENTER"/>
+      <RowConstraints vgrow="ALWAYS" valignment="CENTER"/>
+      <RowConstraints vgrow="ALWAYS" valignment="CENTER"/>
+      <RowConstraints vgrow="ALWAYS" valignment="CENTER"/>
+      <RowConstraints vgrow="ALWAYS" valignment="CENTER"/>
+      <RowConstraints vgrow="ALWAYS" valignment="CENTER"/>
+      <RowConstraints vgrow="ALWAYS" valignment="CENTER"/>
+   </rowConstraints>
+   <stylesheets>
+      <URL value="@digitron.css" />
+   </stylesheets>
+   <children>
+      <Label fx:id="display" alignment="CENTER_RIGHT" maxHeight="Infinity" maxWidth="Infinity" text="${controller.broj}" GridPane.columnSpan="4" />
+      <Button fx:id="btn0" maxWidth="Infinity" onAction="#nulaBtn" text="0" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+      <Button fx:id="btn1" maxWidth="Infinity" onAction="#jedanBtn" text="1" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+      <Button fx:id="btn2" maxWidth="Infinity" onAction="#dvaBtn" text="2" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <Button fx:id="btn3" maxWidth="Infinity" onAction="#triBtn" text="3" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+      <Button fx:id="btn4" maxWidth="Infinity" onAction="#cetiriBtn" text="4" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+      <Button fx:id="btn5" maxWidth="Infinity" onAction="#petBtn" text="5" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <Button fx:id="btn6" maxWidth="Infinity" onAction="#sestBtn" text="6" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+      <Button fx:id="btn7" maxWidth="Infinity" onAction="#sedamBtn" text="7" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+      <Button fx:id="btn8" maxWidth="Infinity" onAction="#osamBtn" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Button fx:id="btn9" maxWidth="Infinity" onAction="#devetBtn" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <Button fx:id="mnozenje" maxWidth="Infinity" onAction="#putaBtn" text="x" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+      <Button fx:id="dijeljenje" alignment="CENTER" maxWidth="Infinity" onAction="#podijeljenoBtn" text="/" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Button fx:id="postotak" maxWidth="Infinity" onAction="#modulBtn" text="\%" GridPane.rowIndex="1" />
+      <Button fx:id="minus" maxWidth="Infinity" onAction="#minusBtn" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+      <Button fx:id="plusBtn" maxHeight="Infinity" maxWidth="Infinity" onAction="#plusBtn" text="+" GridPane.columnIndex="3" GridPane.rowIndex="2" GridPane.rowSpan="2" />
+      <Button fx:id="equalsBtn" maxHeight="Infinity" maxWidth="Infinity" onAction="#equalsBtn" text="=" GridPane.columnIndex="3" GridPane.rowIndex="4" GridPane.rowSpan="2" />
+      <Button fx:id="dotBtn" maxWidth="Infinity" onAction="#dotBtn" text="." GridPane.columnIndex="2" GridPane.rowIndex="5" />
+   </children>
 </GridPane>
