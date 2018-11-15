@@ -5,16 +5,16 @@ import javafx.event.ActionEvent;
 
 public class Controller {
     private SimpleStringProperty broj;
-    private SimpleStringProperty prethodnoUneseniBroj;//ovaj atribut sluzi da se sacuva vrijednost prvog operanda
+    private SimpleStringProperty prethodnoUneseniBroj; //ovaj atribut sluzi da se sacuva vrijednost prvog operanda
     private SimpleStringProperty operacije;
     private double rezultat = 0;
-    boolean prvaNula = false;
+ //   boolean prvaNula = false;
     public Controller() {
         broj = new SimpleStringProperty("");
         prethodnoUneseniBroj = new SimpleStringProperty("");
         operacije = new SimpleStringProperty("=");
         broj.set("0");
-        prvaNula = true;
+    //    prvaNula = true;
     }
     public SimpleStringProperty brojProperty() {
         return broj;
@@ -41,7 +41,8 @@ public class Controller {
         brojProperty().setValue(getBroj().concat(br));
     }
     public void nulaBtn(ActionEvent actionEvent) {
-        napraviBroj("0");
+        if(!getBroj().equals("0") && !getprethodnoUneseniBroj().equals("0"))
+            napraviBroj("0");
     }
     public void jedanBtn(ActionEvent actionEvent) {
         napraviBroj("1");
@@ -118,8 +119,7 @@ public class Controller {
         else if(getOperacije().equals("-")) rezultat = Double.parseDouble(getprethodnoUneseniBroj()) - Double.parseDouble(getBroj());
         else if(getOperacije().equals("%")) rezultat = Double.parseDouble(getprethodnoUneseniBroj()) % Double.parseDouble(getBroj());
         else if(getOperacije().equals("=")) rezultat = Double.parseDouble(getBroj());
+
         brojProperty().setValue("" + rezultat);
-        prethodnoUneseniBroj.set("");
-        operacije.set("=");
     }
 }

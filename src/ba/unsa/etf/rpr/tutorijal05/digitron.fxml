@@ -7,6 +7,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
+
 <?import javafx.geometry.Insets?>
 <GridPane alignment="center" hgap="5.0" vgap="5.0" xmlns="http://javafx.com/javafx/8.0.191" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rpr.tutorijal05.Controller">
    <columnConstraints>
@@ -32,8 +33,8 @@
       <URL value="@digitron.css" />
    </stylesheets>
    <children>
-      <Label fx:id="display" alignment="CENTER_RIGHT" maxHeight="Infinity" maxWidth="Infinity" text="${controller.broj}" GridPane.columnSpan="4" />
-      <Button fx:id="btn0" maxWidth="Infinity" onAction="#nulaBtn" text="0" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+      <Label fx:id="display" alignment="CENTER_RIGHT" maxHeight="Infinity" maxWidth="Infinity" text="${controller.broj}" GridPane.columnSpan="4"/>
+      <Button fx:id="btn0"  maxWidth="Infinity" onAction="#nulaBtn" text="0" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="5" />
       <Button fx:id="btn1" maxWidth="Infinity" onAction="#jedanBtn" text="1" GridPane.columnIndex="0" GridPane.rowIndex="4" />
       <Button fx:id="btn2" maxWidth="Infinity" onAction="#dvaBtn" text="2" GridPane.columnIndex="1" GridPane.rowIndex="4" />
       <Button fx:id="btn3" maxWidth="Infinity" onAction="#triBtn" text="3" GridPane.columnIndex="2" GridPane.rowIndex="4" />
@@ -51,4 +52,7 @@
       <Button fx:id="equalsBtn" maxHeight="Infinity" maxWidth="Infinity" onAction="#equalsBtn" text="=" GridPane.columnIndex="3" GridPane.rowIndex="4" GridPane.rowSpan="2" />
       <Button fx:id="dotBtn" maxWidth="Infinity" onAction="#dotBtn" text="." GridPane.columnIndex="2" GridPane.rowIndex="5" />
    </children>
+   <padding>
+      <Insets bottom="5" top="5" left="5" right="5"/>
+   </padding>
 </GridPane>
