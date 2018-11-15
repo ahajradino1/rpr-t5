@@ -1,20 +1,24 @@
 package ba.unsa.etf.rpr.tutorijal05;
 
 import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.value.WritableFloatValue;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+
+import java.awt.*;
 
 public class Controller {
     private SimpleStringProperty broj;
     private SimpleStringProperty prethodnoUneseniBroj; //ovaj atribut sluzi da se sacuva vrijednost prvog operanda
     private SimpleStringProperty operacije;
+    private String displej = "";
     private double rezultat = 0;
- //   boolean prvaNula = false;
     public Controller() {
         broj = new SimpleStringProperty("");
         prethodnoUneseniBroj = new SimpleStringProperty("");
         operacije = new SimpleStringProperty("=");
+        prethodnoUneseniBroj = new SimpleStringProperty("=");
         broj.set("0");
-    //    prvaNula = true;
     }
     public SimpleStringProperty brojProperty() {
         return broj;
@@ -22,9 +26,11 @@ public class Controller {
     public String getBroj() {
         return broj.get();
     }
+
     public SimpleStringProperty prethodnoUneseniBrojProperty() {
         return prethodnoUneseniBroj;
     }
+
     public String getprethodnoUneseniBroj() {
         return prethodnoUneseniBroj.get();
     }
@@ -82,7 +88,10 @@ public class Controller {
     public void putaBtn(ActionEvent actionEvent) {
         prethodnoUneseniBroj.set(getBroj());
         broj.set("");
-        operacije.set("x");
+        if(!displej.contains("x")) {
+            operacije.set("x");
+            displej += "x";
+        }
     }
 
     public void podijeljenoBtn(ActionEvent actionEvent) {
@@ -109,17 +118,23 @@ public class Controller {
         operacije.set("+");
     }
     public void dotBtn(ActionEvent actionEvent) {
+        prethodnoUneseniBroj.set(getBroj());
         broj.set(getBroj() + ".");
+        operacije.set(".");
     }
 
     public void equalsBtn(ActionEvent actionEvent) {
         if(getOperacije().equals("x")) rezultat = Double.parseDouble(getBroj()) * Double.parseDouble(getprethodnoUneseniBroj());
-        else if(getOperacije().equals("/")) rezultat = Double.parseDouble(getprethodnoUneseniBroj()) / Double.parseDouble(getBroj());
+        else if(getOperacije().equals("/"))  rezultat = Double.parseDouble(getprethodnoUneseniBroj()) / Double.parseDouble(getBroj());
         else if(getOperacije().equals("+")) rezultat = Double.parseDouble(getBroj()) + Double.parseDouble(getprethodnoUneseniBroj());
         else if(getOperacije().equals("-")) rezultat = Double.parseDouble(getprethodnoUneseniBroj()) - Double.parseDouble(getBroj());
         else if(getOperacije().equals("%")) rezultat = Double.parseDouble(getprethodnoUneseniBroj()) % Double.parseDouble(getBroj());
         else if(getOperacije().equals("=")) rezultat = Double.parseDouble(getBroj());
 
         brojProperty().setValue("" + rezultat);
+    }
+    public void decimal(ActionEvent actionEvent) {
+       // if(!display.get().contains("."))
+      //      display.set(display.get() + ".");
     }
 }

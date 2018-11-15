@@ -106,4 +106,21 @@ class MainTest {
         robot.clickOn("#btn0");
         assertEquals("10", display.getText());
     }
+    @Test
+    public void putaBtn (FxRobot robot) {
+        display = robot.lookup("#display").queryAs(Label.class);
+        robot.clickOn("#btn1");
+        robot.clickOn("#putaBtn");
+        robot.clickOn("#btn2");
+        robot.clickOn("#equalsBtn");
+        assertEquals("2.0", display.getText());
+    }
+    @Test void podijeljenoBtn (FxRobot robot) {
+        display = robot.lookup("#display").queryAs(Label.class);
+        robot.clickOn("#btn1");
+        robot.clickOn("#podijeljenoBtn");
+        robot.clickOn("#btn0");
+        robot.clickOn("#equalsBtn");
+        assertEquals("Infinity", display.getText());
+    }
 }

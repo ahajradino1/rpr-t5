@@ -37,10 +37,10 @@
       <Button fx:id="btn7" maxWidth="Infinity" onAction="#sedamBtn" text="7" GridPane.columnIndex="0" GridPane.rowIndex="2" />
       <Button fx:id="btn8" maxWidth="Infinity" onAction="#osamBtn" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2" />
       <Button fx:id="btn9" maxWidth="Infinity" onAction="#devetBtn" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-      <Button fx:id="mnozenje" maxWidth="Infinity" onAction="#putaBtn" text="x" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-      <Button fx:id="dijeljenje" alignment="CENTER" maxWidth="Infinity" onAction="#podijeljenoBtn" text="/" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-      <Button fx:id="postotak" maxWidth="Infinity" onAction="#modulBtn" text="\%" GridPane.rowIndex="1" />
-      <Button fx:id="minus" maxWidth="Infinity" onAction="#minusBtn" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+      <Button fx:id="putaBtn" maxWidth="Infinity" onAction="#putaBtn" text="x" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+      <Button fx:id="podijeljenoBtn" alignment="CENTER" maxWidth="Infinity" onAction="#podijeljenoBtn" text="/" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Button fx:id="modulBtn" maxWidth="Infinity" onAction="#modulBtn" text="\%" GridPane.rowIndex="1" />
+      <Button fx:id="minusBtn" maxWidth="Infinity" onAction="#minusBtn" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1" />
       <Button fx:id="plusBtn" maxHeight="Infinity" maxWidth="Infinity" onAction="#plusBtn" text="+" GridPane.columnIndex="3" GridPane.rowIndex="2" GridPane.rowSpan="2" />
       <Button fx:id="equalsBtn" maxHeight="Infinity" maxWidth="Infinity" onAction="#equalsBtn" text="=" GridPane.columnIndex="3" GridPane.rowIndex="4" GridPane.rowSpan="2" />
       <Button fx:id="dotBtn" maxWidth="Infinity" onAction="#dotBtn" text="." GridPane.columnIndex="2" GridPane.rowIndex="5" />
